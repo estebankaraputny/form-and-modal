@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header></header>
+    <main class="container-main">
+        
+            <form class="form" id="form">
+                <div id="formSuccess" class="success"></div>
+                <div>
+                    <label for="firstname">Name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First name" autocomplete="given-name">
+                    <div class="error" id="firstnameError"></div>
+                </div>
+                <div>
+                    <label for="lastname">Lastname</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last name" autocomplete="family-name">
+                    <div class="error" id="lastnameError"></div>
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="User name" autocomplete="username">
+                    <div class="error" id="usernameError"></div>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" autocomplete="new-password">
+                    <div class="error" id="passwordError"></div>
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" autocomplete="new-password">
+                    <div class="error" id="confirm-passwordError"></div>
+                </div>
+                <div>
+                    <label for="birthdate">Birthdate</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                    <div class="error" id="birthdateError"></div>
+                </div>
+                <div>
+                    <label for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                        Subcribe to our newsletter
+                    </label>
+                    <div class="error" id="subscribeError"></div>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        
+    </main>
+    <footer></footer>
+</body>
+<script src="./js/index.js"></script>
+</html>

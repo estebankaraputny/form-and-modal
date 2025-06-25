@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventana Modal Personalizada</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <button onclick="openModal()" class="buttonModal">Haz click aqui</button>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <h2>Hola Cami</h2>
+      <p>¿Estás seguro de que deseas saludar a Esteban?</p>
+      <div class="modal-buttons">
+        <button class="confirm-btn" onclick="confirmAction()">Saludar al más pro</button>
+        <button class="cancel-btn" onclick="closeModal()">Ignorarlo y perder la oportunidad de tu vida</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>

@@ -29,13 +29,6 @@ const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const birthday = document.getElementById("birthdate");
 
-// Ejemplo de cómo obtener los valores:
-console.log(firstName.value);
-console.log(lastName.value);
-console.log(userName.value);
-console.log(password.value);
-console.log(confirmPassword.value);
-console.log(birthday.value);
 
 //OBTENER VALORES DE LOS INPUTS COMO STRING
 const firstNameValue = firstName.value.trim();
@@ -120,8 +113,23 @@ const birthdayValue = birthday.value.trim();
     // Mostrar mensaje de éxito
     if (!hasError) {   
         document.getElementById("formSuccess").textContent = "¡Registro exitoso!";
+        //SUBIMOS TODO AL LOCAL STORAGE
+        dateForm(firstName, lastName, userName, password, confirmPassword, birthday);
         form.reset(); // Limpiar el formulario
     }
-
-
 });
+
+
+ const dateForm = (name, subname, user, pass, conPass, birt) => {
+        const formData = {
+            name: name.value,
+            subname: subname.value,
+            user: user.value,
+            pass: pass.value,
+            conPass: conPass.value,
+            birt: birt.value
+        };
+        
+        localStorage.setItem("formData", JSON.stringify(formData));
+}
+
